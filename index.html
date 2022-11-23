@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/night.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+    <style>
+      .full {
+        height: 100%;
+        width: 100%;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section class="full">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="164"
+            height="164"
+            viewBox="0 0 24 24"
+            style="margin-bottom: 2rem"
+            fill="rgb(231, 173, 82)"
+          >
+            <path
+              d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"
+            />
+          </svg>
+          <h4>
+            Analiza porównawcza przykładowych metod <br />
+            pozycjonowania wewnątrzbudynkowego<br />
+            z zastosowaniem modułu ESP32<br />
+            i wybranych standardów komunikacji radiowej
+          </h4>
+          <p style="position: absolute; bottom: 0; left: 0; font-size: 2rem">
+            Autor: inż. Mikołaj Tkaczyk <br />
+            Promotor: dr inż. Artur Wiliński
+          </p>
+        </section>
+        <section>
+          <h3>Problem badawczy</h3>
+          <p>
+            Która z metod pozycjonowania daje najlepsze rezultaty?<br />Czy może
+            ma sens próba stworzenia nowej metody?
+          </p>
+        </section>
+        <section>
+          <h3>Dziedzina badań</h3>
+          <p>
+            Aktywne rozpoznawanie pozycji urządzenia końcowego <br />
+            w określonym zakresie budynku na bazie parametrów połączenia
+            radiowego.
+          </p>
+        </section>
+        <section>
+          <h3>Po co?</h3>
+          <p>
+            Wdrożenie rozwiązania u obecnego pracodawcy<br />
+            w kierunku monitorowania aktywności pracowników.
+          </p>
+        </section>
+        <section data-auto-animate>
+          <h3>Jakie urządzenia zostaną użyte?</h3>
+        </section>
+        <section data-auto-animate>
+          <h3>Jakie urządzenia zostaną użyte?</h3>
+          <img src="assets/SBC-NodeMCU-ESP32-01.png" style="width: 20%" />
+          <p>ESP32 (ESP-WROOM-32)</p>
+        </section>
+        <section data-auto-animate>
+          <h3>Jakie urządzenia zostaną użyte?</h3>
+          <img src="assets/RASPBERRY_PI_3B_PLUS_001.png" style="width: 29%" />
+          <p>Raspberry Pi 3B+</p>
+        </section>
+        <section data-auto-animate>
+          <h3>Jakie urządzenia zostaną użyte?</h3>
+          <img
+            src="assets/pol_pl_Apple-iPhone-8-Silver-64GB-Smartfon-Stan-Dobry-13236_2.png"
+            style="width: 25.5%"
+          />
+          <p>Smartphone</p>
+        </section>
+        <section>
+          <h3>Topologia w badaniach</h3>
+        </section>
+        <section data-transition="slide-in none-out">
+          <img src="assets/topo1.png" style="width: 50%" />
+        </section>
+        <section data-transition="fade-in none-out">
+          <img src="assets/topo2.png" style="width: 50%" />
+        </section>
+        <section data-transition="fade-in none-out">
+          <img src="assets/topo3.png" style="width: 50%" />
+        </section>
+        <section data-transition="fade-in none-out">
+          <img src="assets/topo4.png" style="width: 50%" />
+        </section>
+        <section data-transition="fade-in slide-out">
+          <img src="assets/topo5.png" style="width: 50%" />
+        </section>
+        <section data-auto-animate>
+          <h3>Postęp prac:</h3>
+        </section>
+        <section data-auto-animate>
+          <h3>Postęp prac:</h3>
+          <ul>
+            <li>skonfigurowano środowisko deweloperskie dla ESP32</li>
+          </ul>
+        </section>
+        <section data-auto-animate>
+          <h3>Postęp prac:</h3>
+          <ul>
+            <li>skonfigurowano środowisko deweloperskie dla ESP32</li>
+            <li>przeprowadzono testy łączności BLE i WiFi 2.4GHz</li>
+          </ul>
+        </section>
+        <section data-auto-animate>
+          <h3>Postęp prac:</h3>
+          <ul>
+            <li>skonfigurowano środowisko deweloperskie dla ESP32</li>
+            <li>przeprowadzono testy łączności BLE i WiFi 2.4GHz</li>
+            <li>
+              zebrano i przyswojono część bibliografii, <br />głównie o metodach
+              triangulacji, zamianie RSSI na odległość <br />oraz sposobach
+              machine learningowych
+            </li>
+          </ul>
+        </section>
+        <section data-auto-animate>
+          <h3>Postęp prac:</h3>
+          <ul>
+            <li>skonfigurowano środowisko deweloperskie dla ESP32</li>
+            <li>przeprowadzono testy łączności BLE i WiFi 2.4GHz</li>
+            <li>
+              zebrano i przyswojono część bibliografii, <br />głównie o metodach
+              triangulacji, zamianie RSSI na odległość <br />oraz sposobach
+              machine learningowych
+            </li>
+            <li>
+              rozpoczęto pisanie pierwszego rozdziału prezentującego problem
+              <br />i obecnie używane rozwiązania
+            </li>
+          </ul>
+        </section>
+        <section>
+          <p>
+            W okresie styczeń-luty planowane jest przeprowadzenie pomiarów RSSI
+            w środowisku testowym.<br />Będą one służyć jako dane wejściowe
+            analizy porównawczej.
+          </p>
+        </section>
+        <section data-auto-animate>
+          <h3>Konspekt pracy:</h3>
+        </section>
+        <section data-auto-animate>
+          <h3>Konspekt pracy:</h3>
+          <ul>
+            <li>Spis treści</li>
+          </ul>
+        </section>
+        <section data-auto-animate>
+          <h3>Konspekt pracy:</h3>
+          <ul>
+            <li>Spis treści</li>
+          </ul>
+          <div style="margin: 1rem 0 1rem 0">
+            <ol>
+              <li>Wstęp - opisuący temat</li>
+            </ol>
+          </div>
+        </section>
+        <section data-auto-animate>
+          <h3>Konspekt pracy:</h3>
+          <ul>
+            <li>Spis treści</li>
+          </ul>
+          <div style="margin: 1rem 0 1rem 0">
+            <ol>
+              <li>Wstęp - opisuący temat</li>
+              <li>Zapoznanie z bibliografią i istniejącymi badaniami</li>
+            </ol>
+          </div>
+        </section>
+        <section data-auto-animate>
+          <h3>Konspekt pracy:</h3>
+          <ul>
+            <li>Spis treści</li>
+          </ul>
+          <div style="margin: 1rem 0 1rem 0">
+            <ol>
+              <li>Wstęp - opisuący temat</li>
+              <li>Zapoznanie z bibliografią i istniejącymi badaniami</li>
+              <li>Opis implementacji środowiska testowego</li>
+            </ol>
+          </div>
+        </section>
+        <section data-auto-animate>
+          <h3>Konspekt pracy:</h3>
+          <ul>
+            <li>Spis treści</li>
+          </ul>
+          <div style="margin: 1rem 0 1rem 0">
+            <ol>
+              <li>Wstęp - opisuący temat</li>
+              <li>Zapoznanie z bibliografią i istniejącymi badaniami</li>
+              <li>Opis implementacji środowiska testowego</li>
+              <li>Sposób przeprowadzenia badań</li>
+            </ol>
+          </div>
+        </section>
+        <section data-auto-animate>
+          <h3>Konspekt pracy:</h3>
+          <ul>
+            <li>Spis treści</li>
+          </ul>
+          <div style="margin: 1rem 0 1rem 0">
+            <ol>
+              <li>Wstęp - opisuący temat</li>
+              <li>Zapoznanie z bibliografią i istniejącymi badaniami</li>
+              <li>Opis implementacji środowiska testowego</li>
+              <li>Sposób przeprowadzenia badań</li>
+              <li>Praca nad materiałem badawczym</li>
+            </ol>
+          </div>
+        </section>
+        <section data-auto-animate>
+          <h3>Konspekt pracy:</h3>
+          <ul>
+            <li>Spis treści</li>
+          </ul>
+          <div style="margin: 1rem 0 1rem 0">
+            <ol>
+              <li>Wstęp - opisuący temat</li>
+              <li>Zapoznanie z bibliografią i istniejącymi badaniami</li>
+              <li>Opis implementacji środowiska testowego</li>
+              <li>Sposób przeprowadzenia badań</li>
+              <li>Praca nad materiałem badawczym</li>
+              <li>Wyniki i podsumowanie pracy</li>
+            </ol>
+          </div>
+        </section>
+        <section data-auto-animate>
+          <h3>Konspekt pracy:</h3>
+          <ul>
+            <li>Spis treści</li>
+          </ul>
+          <div style="margin: 1rem 0 1rem 0">
+            <ol>
+              <li>Wstęp - opisuący temat</li>
+              <li>Zapoznanie z bibliografią i istniejącymi badaniami</li>
+              <li>Opis implementacji środowiska testowego</li>
+              <li>Sposób przeprowadzenia badań</li>
+              <li>Praca nad materiałem badawczym</li>
+              <li>Wyniki i podsumowanie pracy</li>
+            </ol>
+          </div>
+          <ul>
+            <li>Bibliografia</li>
+          </ul>
+        </section>
+        <section>
+          <ol>
+            <li style="font-size: xx-large; color: rgb(231, 173, 82)">
+              Sensor fusion for indoor positioning system through improved RSSI
+              and PDR methods -
+              <span style="font-size: x-large; color: white"
+                >Hamidreza Mehrabian, Reza Ravanmehr | Future Generation
+                Computer Systems 138 (2023) 254–269</span
+              >
+            </li>
+            <li style="font-size: xx-large; color: rgb(231, 173, 82)">
+              TTSL: An indoor localization method based on Temporal
+              Convolutional Network using time-series RSSI -
+              <span style="font-size: x-large; color: white"
+                >Bing Jia, Jingbin Liu, Tao Feng, Baoqi Huang, Thar Baker,
+                Hissam Tawfik | Computer Communications 193 (2022) 293–301</span
+              >
+            </li>
+            <li style="font-size: xx-large; color: rgb(231, 173, 82)">
+              When RSSI encounters deep learning: An area localization scheme
+              for pervasive sensing systems -
+              <span style="font-size: x-large; color: white"
+                >Zhishu Shen, Tiehua Zhang, Atsushi Tagami, Jiong Jin | Journal
+                of Network and Computer Applications 173 (2021) 102852</span
+              >
+            </li>
+            <li style="font-size: xx-large; color: rgb(231, 173, 82)">
+              RSSI quantization and genetic algorithm based localization in
+              wireless sensor networks -
+              <span style="font-size: x-large; color: white"
+                >Qianqian Rena, Yang Zhang, Ioanis Nikolaidis, Jinbao Li, Yu Pan
+                | Ad Hoc Networks 107 (2020) 102255</span
+              >
+            </li>
+            <li style="font-size: xx-large; color: rgb(231, 173, 82)">
+              Human positioning estimation method using received signal strength
+              indicator (RSSI) in a wireless sensor network -
+              <span style="font-size: x-large; color: white"
+                >Kimio Oguchi, Shou Marutab, Dai Hanawa | Procedia Computer
+                Science 34 ( 2014 ) 126 – 132
+              </span>
+            </li>
+            <li style="font-size: xx-large; color: rgb(231, 173, 82)">
+              An Empirical Comparison of Machine Learning Models for Time Series
+              Forecasting -
+              <span style="font-size: x-large; color: white"
+                >Nesreen K. Ahmed , Amir F. Atiya, Neamat El Gayar, Hisham
+                El-Shishiny | Econometric Reviews Volume 29, 2010 - Issue 5-6
+                Pages 594-621
+              </span>
+            </li>
+            <li style="font-size: xx-large; color: rgb(231, 173, 82)">
+              MyLib: Smart Library Indoor Navigation Using Bluetooth Low Energy
+              with Triangulation Method -
+              <span style="font-size: x-large; color: white"
+                >Tri Nopiani Damayanti, Dadan Nur Ramadan, Indah Mutia Utami |
+                INTL JOURNAL OF ELECTRONICS AND TELECOMMUNICATIONS, 2022, VOL.
+                68, NO. 2, PP. 293-298
+              </span>
+            </li>
+            <li style="font-size: xx-large; color: rgb(231, 173, 82)">
+              Increasing RSSI Localization Accuracy with Distance Reference
+              Anchor in Wireless Sensor Networks -
+              <span style="font-size: x-large; color: white"
+                >Ugur Bekcibasi, Mahmut Tenruh | Acta Polytechnica Hungarica
+                Vol. 11, No. 8, 2014
+              </span>
+            </li>
+            <li style="font-size: xx-large; color: rgb(231, 173, 82)">
+              Experimental comparison of RSSI-based localization algorithms for
+              indoor wireless sensor networks -
+              <span style="font-size: x-large; color: white"
+                >Giovanni Zanca, Francesco Zorzi, Andrea Zanella, Michele Zorzi
+                | REALWSN '08: Proceedings of the workshop on Real-world
+                wireless sensor networks April 2008 Pages 1–5
+              </span>
+            </li>
+            <li style="font-size: xx-large; color: rgb(231, 173, 82)">
+              Is RSSI a Reliable Parameter in Sensor Localization Algorithms –
+              An Experimental Study -
+              <span style="font-size: x-large; color: white"
+                >Ambili Thottam Parameswaran, Mohammad Iftekhar Husain, Shambhu
+                Upadhyaya | 2009
+              </span>
+            </li>
+            <li style="font-size: xx-large; color: rgb(231, 173, 82)">
+              Kolban's Book on ESP32 -
+              <span style="font-size: x-large; color: white"
+                >Neil Kolban | May 2017
+              </span>
+            </li>
+            <li style="font-size: xx-large; color: rgb(231, 173, 82)">
+              Determination of a position in three dimensions using
+              trilateration and approximate distances -
+              <span style="font-size: x-large; color: white"
+                >William S. Murphy Jr. and Willy Hereman | November 28, 1999
+              </span>
+            </li>
+            <li style="font-size: xx-large; color: rgb(231, 173, 82)">
+              Indoor Positioning Algorithm Based on the Improved RSSI Distance
+              Model -
+              <span style="font-size: x-large; color: white"
+                >Guoquan Li, Enxu Geng, Zhouyang Ye, Yongjun Xu, Jinzhao Lin, Yu
+                Pang | Sensors (Basel) 2018 Aug 27;18(9):2820
+              </span>
+            </li>
+            <li style="font-size: xx-large; color: rgb(231, 173, 82)">
+              Semantic Node-RED for Rapid Development of Interoperable
+              Industrial IoT Applications -
+              <span style="font-size: x-large; color: white"
+                >Aparna Saisree Thuluva, Darko Anicic, Sebastian Rudolph,
+                Malintha Adikari | Semantic Web, vol. 11, no. 6, pp. 949-975,
+                2020
+              </span>
+            </li>
+          </ol>
+        </section>
+        <section data-auto-animate>
+          <h3>Serdecznie dziękuję za uwagę</h3>
+        </section>
+        <section data-auto-animate>
+          <h3>Serdecznie dziękuję za uwagę</h3>
+          <p>Czekam na ewentualne pytania</p>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        width: "100%",
+        height: "100%",
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>
